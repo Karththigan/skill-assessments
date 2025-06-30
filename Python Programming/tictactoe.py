@@ -102,8 +102,8 @@ while not game_over:
     else:
         print(f"It is Player {computer_symbol}'s turn")
         place_cpu_move(board, computer_symbol)
-        print(f"Player {computer_symbol} turn is over!")
         print_board(board)
+        print(f"Player {computer_symbol} turn is over!")
         time.sleep(2)
 
     game_over = check_winner(board)
