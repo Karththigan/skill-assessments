@@ -1,6 +1,7 @@
 import random
 import time
 
+
 print("Welcome to Tic-Tac-Toe!")
 
 user_symbol = input("Do you want to be Player X or Player O? (X/O) ").upper()
