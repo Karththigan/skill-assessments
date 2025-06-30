@@ -18,16 +18,14 @@ game_over = False
 
 curr_player_is_user = True if user_symbol == "X" else False
 
-board = [
-    ["-","-","-"],
-    ["-","-","-"],
-    ["-","-","-"]
-]
+board = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]]
+
 
 def print_board(board):
     print("   " + "   ".join(str(col) for col in range(0, 3)))
     for row_idx, row in enumerate(board):
         print(f"{row_idx}  " + " | ".join(row))
+
 
 def place_cpu_move(board, symbol):
     # Find all available spots on the board
@@ -67,10 +65,12 @@ def check_winner(board):
 
     return False
 
+
 def is_valid_placement(row_num, col_num, board):
     if board[row_num][col_num] == "-":
         return True
     return False
+
 
 while not game_over:
     print(f"========== ROUND {round_num} ========== \n")
@@ -111,5 +111,3 @@ while not game_over:
     curr_player_is_user = not curr_player_is_user
 
 print(f"GAME OVER! The winner is: {check_winner(board)}")
-
-
